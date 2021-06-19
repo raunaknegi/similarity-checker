@@ -1,0 +1,37 @@
+body{
+    text-align: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.nav-bar{
+    text-align: right;
+    background-color: indianred;
+    padding: 1%;
+}
+
+.nav-bar,.footer-container{
+    color: white;
+}
+
+.body-container{
+    background-color: lightcyan;
+}
+
+.API-text{
+    font-family: cursive;
+}
+
+.list{
+    text-align: left;
+}
+
+.img{
+    width: 80%;
+    padding-bottom: 2%;
+}
+
+.footer-container{
+    padding: 1%;
+    background-color: indianred;
+}
+
