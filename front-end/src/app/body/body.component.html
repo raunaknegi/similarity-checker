@@ -1,0 +1,42 @@
+<div class="container">
+    <div class="introduction">
+        <p>Welcome to Doc-Check! Your easy document similarity checker.</p>
+        <p>You can enter the two document strings that you want to compare, and select the model that you 
+            want to use for comparison, and click the predict button.
+        </p>    
+
+        <p>
+            Check out the API <a href="http://127.0.0.1:5000/">here</a>
+        </p>
+    </div>
+
+    <div class="document-strings">
+        <textarea class="doc" cols="50" rows="15" placeholder="Enter Text 1" [(ngModel)]="doc1" maxlength="500"></textarea>
+        <textarea class="doc" cols="50" rows="15" placeholder="Enter Text 2" [(ngModel)]="doc2" maxlength="500"></textarea>
+    </div>
+
+    <div class="options">
+        <select class="option-list" name="modelName" [(ngModel)]="modelName">
+            <option value="BERT">BERT</option>
+            <option value="USE">USE</option>
+            <option value="InferSent">Infersent</option>
+            <option value="tf_idf">TF-IDF</option>
+            <option value="jaccard_similarity">Jaccard Similarity</option>
+        </select>
+    </div>
+
+    <div class="error" *ngIf="error">
+        {{errorMessage}}
+    </div>
+
+    <div class="loading-Score" *ngIf="loading">
+        Please wait, {{modelName}} is loading
+    </div>
+
+    <div class="loading-Score" *ngIf="Score!=-1 && !loading">
+        Score: {{Score}}
+    </div>
+
+    <button class="btn" (click)="getScore()">Predict</button>    
+
+</div>

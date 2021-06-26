@@ -34,7 +34,7 @@ def BERT(document1,document2):
 
 #using Universal Sentence Encoder
 def USE(document1,document2):
-    module_url = "https://tfhub.dev/google/universal-sentence-encoder/4"
+    module_url = "http://tfhub.dev/google/universal-sentence-encoder/4"
     model=hub.load(module_url)
 
     vec1=model([document1])

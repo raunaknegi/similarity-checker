@@ -1,9 +1,12 @@
 import flask
 from infersent import *
 from similarity_models import *
+from flask_cors import CORS
 from flask import Flask, flash, request,jsonify, json
 
 app=Flask(__name__)
+cors = CORS(app)
+
 
 @app.route('/')
 def main():
@@ -16,20 +19,12 @@ def predict_similarity():
     document1=json_data['doc1']
     document2=json_data['doc2']
     name=json_data['modelName']
-    #get the model name that has to be used
-    score=eval(name+'(document1,document2)')
-    #jsonify score
-    return jsonify(
-        similarity=score
-    )
 
-#predicting infersent predictions on a different route
-@app.route('/predict_infersent',methods=['POST'])
-def predict_infersent():
-    json_data=request.get_json()
-    document1=json_data['doc1']
-    document2=json_data['doc2']
-    score=Infersent(document1,document2)
+    if(name=='InferSent'):
+        score=Infersent(document1,document2)
+    else:
+        score=eval(name+'(document1,document2)')
+    #jsonify score
     return jsonify(
         similarity=score
     )

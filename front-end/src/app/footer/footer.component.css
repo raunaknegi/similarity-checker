@@ -1,0 +1,11 @@
+.container{
+    text-align: center;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    background-color: khaki;
+}
+
+p{
+    padding: 2rem;
+}

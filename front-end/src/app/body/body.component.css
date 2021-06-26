@@ -1,0 +1,46 @@
+.container{
+    background-color: cornsilk;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 0;
+}
+
+.introduction{
+    padding: 1rem;
+}
+
+p{
+    padding: 0.5rem;
+}
+
+textarea{
+    resize: none;
+}
+
+.document-strings{
+    padding: 1.5rem auto;
+}
+.doc{
+    margin: 0 5rem;
+}
+
+.options{
+    padding: 1rem 0;
+}
+
+.option-list{
+    display: flex;
+    margin: 0 auto;
+}
+
+.loading-Score{
+    padding: 1rem 0;
+}
+
+.btn{
+    display: flex;
+    margin: 0 auto;
+    height: 100%;
+    text-align: center;
+}
