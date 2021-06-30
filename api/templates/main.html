@@ -16,32 +16,24 @@
         <div class="container-fluid nav-bar col-md-12">
             <h4> Made by Raunak Negi</h4>
         </div>
-        <div class="container-fluid body-container">
+        <div class="container-fluid body-container col-md-12">
             <div class="heading">
                 <h2>Document Similarity API Service</h2>
             </div>
             <div class="body-container">
                 <div class="API-text col-md-6">
                     <p>The purpose of this service is to return the similarity score of 2
-                        documents based on the model chosen by user. The API is build via Flask and deployed on heroku.
+                        documents based on the model chosen by user. The API is build via Flask.
                     </p>
                     <p>
-                        In order to use the API, simply send a post request to either of the two urls:
-                        <ol class="list">
-                            <li>/predict_infersent</li>
-                            <li>/predict_others</li>
-                        </ol>
+                        In order to use the API, simply send a post request to "/predict".
                     </p>
                     <p>
-                        Two different urls are used because InferSent's model building is very different from the rest of the models.
-                        In case of using the InferSent model, the post request should contain the 2 documents as a json object, with 
-                        the key names "doc1" and "doc2". Moreover, InferSent on its first request trains and builds the vocab, so it will 
-                        take some time before responding the score.
-
+                        InferSent on its first request trains and builds the vocab, so it will take some time before responding the score.
                         It is necessary that the 2 values are strings, as other data types create complexity in carrying out the tasks.
                     </p>
                     <p>
-                        For using the "/predict_others" URL, the json object should contain the following 3 keys:
+                        For using the "/predict" URL, the json object should contain the following 3 keys:
                         <ol class="list">
                             <li>"doc1":string</li>
                             <li>"doc2":string</li>
@@ -60,14 +52,12 @@
                     </p>
                 </div>
                 <div class="container-fluid API-example col-md-6">
-                    <img class="img" src="../static/images/infersent.png" alt="image.exe">
-                    <img class="img" src="../static/images/BERT.png">
+                    <img class="img" src="../static/images/Sample.png">
                 </div>
             </div>
         </div>
         <div class="container-fluid footer-container col-md-12">
             <p>Check out my github for more applications</p>
-            <p>Main Webpage Link: </p>
         </div>
     </body>
 </html>

@@ -13,11 +13,16 @@ body{
     color: white;
 }
 
+.heading{
+    margin-top: 1rem;
+}
+
 .body-container{
     background-color: lightcyan;
 }
 
 .API-text{
+    padding-top: 1rem;
     font-family: cursive;
 }
 
@@ -26,12 +31,13 @@ body{
 }
 
 .img{
-    width: 80%;
-    padding-bottom: 2%;
+    width: 100%;
+    margin: 15% auto;
 }
 
 .footer-container{
-    padding: 1%;
+    padding: 2.5rem;
     background-color: indianred;
+    
 }
 
